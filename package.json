@@ -1,0 +1,19 @@
+{
+  "name": "teacup-view",
+  "version": "0.1.0",
+  "description": "View class based on Teacup extansible via components",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "view",
+    "template",
+    "Teacup",
+    "components",
+    "extensible",
+    "MVC"
+  ],
+  "author": "Tadeusz Łazurski (http://lazurski.pl/)",
+  "license": "GPL 3"
+}
