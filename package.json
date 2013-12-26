@@ -4,7 +4,8 @@
   "description": "View class based on Teacup extansible via components",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "./node_modules/.bin/coffee -cm -o lib src"
   },
   "keywords": [
     "view",
