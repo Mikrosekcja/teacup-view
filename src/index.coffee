@@ -20,10 +20,10 @@ module.exports = (options, template) ->
 
   In later case each .coffee or .js file will be required and added to teacup.
   ###
-  
+
   switch typeof components
     when "object" 
-      for name, component in components when typeof component is "function"
+      for name, component of components when typeof component is "function"
         teacup[name] = component.bind teacup
 
     when "string"
