@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "coffee-script": "~1.6.3",
-    "mocha": "~1.16.2"
+    "mocha": "~1.16.2",
+    "should": "~2.1.1",
+    "source-map-support": "~0.2.5"
   }
 }
