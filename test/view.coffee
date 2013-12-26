@@ -25,3 +25,16 @@ describe "View", ->
     
     view(data).should.eql "<body><header><h1>Eye catching!</h1><h2>A title designed to draw attention</h2></header><p>That was a hell of a title!</p></body>"
 
+  it "can load components from directory", ->
+    view = new View
+      components: __dirname + "/components"
+      ->
+        @p "Teacup View is a great tool!"
+        @foot
+          author  : "Tadeusz Łazurski", 
+          project : "Teacup View"
+          license : "GPL 3"
+
+    view().should.eql "<p>Teacup View is a great tool!</p><footer><p>&copy; Tadeusz Łazurski. Teacup View is proudly open source (GPL 3)</p></footer>"
+
+

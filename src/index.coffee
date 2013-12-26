@@ -1,5 +1,6 @@
 teacup    = require "teacup"    
 fs        = require "fs"
+path      = require "path"
 _         = require "lodash"
 _.string  = require "underscore.string"
 
@@ -31,8 +32,8 @@ module.exports = (options, template) ->
       for file in files
         match = file.match /^(.+)\.(js|coffee)$/i
         if match
-          name          = _.string.camelize     match[1]
-          component     = require components +  match[1]
+          name          = _.string.camelize match[1]
+          component     = require path.resolve components, match[1]
 
           teacup[name]  = component
 
