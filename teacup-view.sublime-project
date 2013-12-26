@@ -3,7 +3,8 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "/home/tadeusz/Projects/www/teacup-view"
+			"path": "/home/tadeusz/Projects/www/teacup-view",
+      "folder_exclude_patterns": ["lib", "node_modules"]
 		}
 	]
 }
