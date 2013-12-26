@@ -15,5 +15,14 @@
     "MVC"
   ],
   "author": "Tadeusz Łazurski (http://lazurski.pl/)",
-  "license": "GPL 3"
+  "license": "GPL 3",
+  "dependencies": {
+    "teacup": "~0.2.10",
+    "underscore.string": "~2.3.3",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.16.2"
+  }
 }

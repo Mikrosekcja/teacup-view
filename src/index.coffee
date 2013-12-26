@@ -8,20 +8,33 @@ module.exports = (options, template) ->
     template  = options
     options   = {}
 
-  switch typeof options.helpers
+  {
+    components
+  } = options
+
+  ###
+  `options.components` can be 
+  
+    * a hash of functions 
+    * or a string designating directory where components are.
+
+  In later case each .coffee or .js file will be required and added to teacup.
+  ###
+  
+  switch typeof components
     when "object" 
-      for name, helper in options.helpers when typeof helper is "function"
-        teacup[name] = helper.bind teacup
+      for name, component in components when typeof component is "function"
+        teacup[name] = component.bind teacup
 
     when "string"
-      files   = fs.readdirSync options.helpers
+      files   = fs.readdirSync components
       for file in files
         match = file.match /^(.+)\.(js|coffee)$/i
         if match
-          name    = _.string.camelize       match[1]
-          helper  = require "./helpers/" +  match[1]
+          name          = _.string.camelize     match[1]
+          component     = require components +  match[1]
 
-          teacup[name] = helper
+          teacup[name]  = component
 
   return teacup.renderable template.bind teacup
 
