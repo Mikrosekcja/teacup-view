@@ -1,6 +1,6 @@
 {
   "name": "teacup-view",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "View class based on Teacup extansible via components",
   "main": "lib/index.js",
   "repository": {
