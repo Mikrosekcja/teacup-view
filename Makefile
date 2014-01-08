@@ -10,6 +10,9 @@ init:
 	if [ -e npm-shrinkwrap.json ]; then rm npm-shrinkwrap.json; fi
 	npm install
 
+install: clean
+	hash coffee || { echo "Coffee not installed globally. I need it to compile."; exit 1; }
+	coffee -cm -o lib src	
 
 build: clean init # browserify
 	./node_modules/.bin/coffee -cm -o lib src	
