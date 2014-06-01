@@ -12,10 +12,10 @@ init:
 
 install: clean
 	hash coffee || { echo "Coffee not installed globally. I need it to compile."; exit 1; }
-	coffee -cm -o lib src	
+	coffee -c -o lib src	
 
 build: clean init # browserify
-	./node_modules/.bin/coffee -cm -o lib src	
+	./node_modules/.bin/coffee -c -o lib src	
 
 watch: end-watch
 	./node_modules/.bin/coffee -cmw -o lib src          & echo $$! > .watch_pid
