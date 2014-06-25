@@ -1,7 +1,7 @@
 {
   "name": "teacup-view",
   "version": "0.2.1",
-  "description": "View class based on Teacup extansible via components",
+  "description": "View class - based on Teacup, extensible via components",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -9,8 +9,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "prepublish": "./node_modules/.bin/coffee -c -o lib src",
-    "install": "make install"
+    "prepublish": "./node_modules/.bin/coffee -c -o lib src"
   },
   "keywords": [
     "view",

@@ -1,6 +1,7 @@
-node_modules/
-lib/
+src/
+Makefile
 *.sublime-workspace
+*.sublime-project
 npm-debug.log
 .watch_*
 teacup-view-*.tgz
