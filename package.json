@@ -23,9 +23,9 @@
   "author": "Tadeusz Łazurski (http://lazurski.pl/)",
   "license": "GPL 3",
   "dependencies": {
-    "teacup": "~0.2.10",
-    "underscore.string": "~2.3.3",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "teacup": "^0.4.1",
+    "underscore.string": "~2.3.3"
   },
   "devDependencies": {
     "coffee-script": "~1.6.3",
