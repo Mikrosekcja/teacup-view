@@ -25,4 +25,4 @@ html = view "Anna"
 
 TODO: write better readme with examples.
 
-In the mean time, see tests.
+In the mean time, [see tests](./test/view.coffee).
